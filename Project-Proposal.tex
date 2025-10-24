@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+
+\geometry{margin=1in}
+
+\title{Math 2BL Project Proposal Rough Draft}
+\author{Rachel Eglash}
+\date{October 6, 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Project Name}
+    Adjusted Learning Matrix Model
+
+\section{Project Description}
+    The project will create a graphical user interface (GUI) designed for an instructor (tutor or teacher) who is looking to create an adjustable learning plan for an individual student. This program is focused on providing equitable, accessible, individualized learning plans for students with learning differences, although this program is made in the Universal Design for Learning (UDL) style to benefit all students. The program will use linear algebra and matrices, with an instructor input matrix, a transformation matrix, and an adapted instruction output matrix to provide guidance to the instructor.
+
+    \subsection{Overview of Matrices}
+
+        \[
+            y = Ax
+        \]
+
+        \textbf{Input Matrix:}
+        \[
+            x = \begin{bmatrix}
+            \frac{h-5}{2} \\
+            \frac{c-5}{2} \\
+            \frac{p-5}{2} \\
+            \frac{m-5}{2} \\
+            \end{bmatrix}
+        \]
+
+       where:
+            \begin{itemize}
+               \item $h$ = independence/help provided ($0 = $ no independence, $10 = $ full independence)
+               \item $c$ = observed student confidence ($0 = $ no confidence, $10 = $ full confidence)
+               \item $p$ = persistence ($0 = $ gave up immediately, $10 = $ never gave up)
+                \item $m$ = accuracy \& mistake severity/type ($0 = $ full conceptual error, $10 = $ no errors)
+           \end{itemize}
+
+        \textbf{Transformation Matrix:}
+            \[
+                A = \begin{bmatrix} 
+                a_{11} & a_{12} & a_{13} & a_{14} \\
+                a_{21} & a_{22} & a_{23} & a_{24} \\
+                a_{31} & a_{32} & a_{33} & a_{34}
+                \end{bmatrix}
+                \text{*need to determine matrix values}
+            \]
+
+        \textbf{Output Matrix:}
+            \[
+                y = \begin{bmatrix} d \\ s \\ t \end{bmatrix}
+            \]
+
+        where:
+            \begin{itemize}
+                \item $d$ = adjusted difficulty level, $[-1, 1]$ ($- = $ decrease, $0 = $ same, $+ = $ increase)
+                \item $s$ = adjusted support level, $[-1, 1]$ ($- = $ increase, $0 = $ same, $+ = $ decrease)
+                \item $t$ = adjusted time/pacing, $[-1, 1]$ ($- = $ slow down, $0 = $ same, $+ = $ speed up)
+            \end{itemize}
+
+\end{document}
