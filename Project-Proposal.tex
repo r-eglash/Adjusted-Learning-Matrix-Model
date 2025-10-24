@@ -213,4 +213,102 @@
             \right.
         \]
 
+    \subsubsection{Test to Determine Starting Values for Matrix $A$}
+
+        \textbf{Given:}
+        \begin{itemize}
+            \item Full independence: $h = 10$
+            \item Full confidence: $c = 10$
+            \item Never gave up: $p = 10$
+            \item No errors: $m = 10$
+        \end{itemize}
+
+        \textbf{Then:}
+        \begin{itemize}
+            \item Difficulty increases significantly: $d = 1$
+            \item Support provided decreases significantly: $s = 1$
+            \item Pacing speeds up significantly: $t = 1$
+        \end{itemize}
+
+        \[
+            \begin{bmatrix} 
+                a_{11} & a_{12} & a_{13} & a_{14} \\
+                a_{21} & a_{22} & a_{23} & a_{24} \\
+                a_{31} & a_{32} & a_{33} & a_{34}
+            \end{bmatrix}
+            \begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \end{bmatrix}
+            = 
+            \begin{bmatrix}
+                a_{11} + a_{12} + a_{13} + a_{14} \\
+                a_{21} + a_{22} + a_{23} + a_{24} \\
+                a_{31} + a_{32} + a_{33} + a_{34}
+            \end{bmatrix}
+            =
+            \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}
+        \]
+
+        This yields:
+
+        \[
+            \left\{
+                \begin{aligned}
+                    a_{11} + a_{12} + a_{13} + a_{14} &= 1 \\
+                    a_{21} + a_{22} + a_{23} + a_{24} &= 1 \\
+                    a_{31} + a_{32} + a_{33} + a_{34} &= 1
+                \end{aligned}
+            \right.
+        \]
+
+        Since the range of possible values for $h, c, p,$ and $m$ is $[0, 10]$, the range of possible values for each entry in matrix $x$ is $[-1, 1]$.
+
+        Since the range of possible values for $d, s,$ and $t$ is $[-1, 1]$, the range of possible values for each entry in matrix $y$ is $[-1, 1]$.
+
+        Therefore, if each entry in matrix $A$ has the same weight, the approximate values in matrix $A$ are:
+
+        \[
+            A = \begin{bmatrix} 
+                0.25 & 0.25 & 0.25 & 0.25 \\
+                0.25 & 0.25 & 0.25 & 0.25 \\
+                0.25 & 0.25 & 0.25 & 0.25
+            \end{bmatrix}
+        \]
+
+    \subsubsection{Test to Refine Values for Matrix $A$}
+
+        To refine these values, I will now consider how each output is affected by each input.  All have a positive correlation, and I will rate the correlation as strong, moderate, or weak.  I will then adjust the corresponding matrix values, keeping the sum of each matrix row as 1.
+
+        \textbf{For difficulty ($d$):}
+        \begin{itemize}
+	        \item independence ($h$) – strong positive correlation (increase $a_{11}$ to $0.35$)
+	        \item confidence ($c$) – moderate positive correlation (decrease $a_{12}$ to $0.15$)
+	        \item perseverance ($p$) – moderate positive correlation (decrease $a_{13}$ to $0.15$)
+	        \item accuracy ($m$) – strong positive correlation (increase $a_{14}$ to $0.35$)
+        \end{itemize}
+
+        \textbf{For support ($s$):}
+        \begin{itemize}
+	        \item independence ($h$) – strong positive correlation (increase $a_{21}$ to $0.30$)
+	        \item confidence ($c$) – strong positive correlation (increase $a_{22}$ to $0.30$)
+	        \item perseverance ($p$) – strong positive correlation (increase $a_{23}$ to $0.30$)
+	        \item accuracy ($m$) – moderate positive correlation (decrease $a_{24}$ to $0.10$)
+        \end{itemize}
+
+        \textbf{For pacing ($t$):}
+        \begin{itemize}
+	        \item independence ($h$) – moderate positive correlation (increase $a_{31}$ to $0.30$)
+	        \item confidence ($c$) – weak positive correlation (decrease $a_{32}$ to $0.15$)
+	        \item perseverance ($p$) – weak positive correlation (decrease $a_{33}$ to $0.15$)
+	        \item accuracy ($m$) – strong positive correlation (increase $a_{34}$ to $0.40$)
+        \end{itemize}
+
+        \textbf{Updated adjusted matrix $A$:}
+
+        \[
+            A = \begin{bmatrix} 
+                0.35 & 0.15 & 0.15 & 0.35 \\
+                0.30 & 0.30 & 0.30 & 0.10 \\
+                0.30 & 0.15 & 0.15 & 0.40
+            \end{bmatrix}
+        \]
+
 \end{document}
