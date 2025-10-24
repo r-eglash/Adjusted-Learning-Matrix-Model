@@ -6,6 +6,7 @@ public class AdjustedLearningMM
     //public int[][] inputMatrix;
     //public int[][] normalizedInputMatrix;
 
+    // Method to get input matrix from user
     int[][] getInputMatrix()
     {
         // Method to get input matrix from user
@@ -26,14 +27,14 @@ public class AdjustedLearningMM
         System.out.print("Enter student's accuracy & mistake severity/type* (0=full conceptual error, 10=no errors): ");
         int mistake = scanner.nextInt();
 
+        // Close the scaner
+        scanner.close();
+
         // Create and return the input matrix
         return new int[][] { {help}, {confidence}, {persistence}, {mistake} };
-
-       // Close the scaner
-       //scanner.close();
    }
 
-   // Method to normalize the input matrix
+    // Method to normalize the input matrix
     double[][] getNormalizedInputMatrix()
     {        
         // Call getInputMatri to populate the input matrix
