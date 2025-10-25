@@ -1,0 +1,410 @@
+%TODO: Add solutions at the end of the document
+%TODO: Add graphs where needed
+%TODO: Check spacing after adding graphs
+
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{8pt}
+
+\title{Week 7: Systems Applications \& Inequalities}
+\author{
+	Student: SA\\
+	Tutor: Rachel Eglash}
+\date{October 24, 2025}
+
+\begin{document}
+	
+	\maketitle
+
+	\section*{Session 7.3 \\ Linear Modeling \& Fit-by-Eye}
+
+		\newpage
+
+	\section*{Quick Reference: Linear Modeling}
+
+		\subsection*{What is a Line of Best Fit?}
+
+			A \textbf{line of best fit} (or trend line) is a straight line that best represents the data on a scatter plot.
+
+			\textbf{Key Ideas:}
+			\begin{itemize}
+				\item Not all points will be exactly on the line
+				\item The line shows the general trend or pattern
+				\item We use the line to make predictions
+				\item The line minimizes the distance from all the data points
+			\end{itemize}
+
+		\subsection*{Steps to Create a Line of Best Fit}
+
+			\textbf{1. Plot the Data}
+			\begin{itemize}
+				\item Create a scatter plot of all data points
+				\item Label axes with variable names and units
+				\item Choose an appropriate scale
+			\end{itemize}
+
+			\textbf{2. Draw the Line}
+			\begin{itemize}
+				\item Use a ruler or straightedge
+				\item Try to balance points above and below the line
+				\item The line should follow the general trend
+				\item Extend the line across the entire graph
+			\end{itemize}
+
+			\textbf{3. Find the Equation}
+			\begin{itemize}
+				\item Pick two points ON your line (they don't have to be data points)
+				\item Calculate the slope: $m = \frac{y_2 - y_1}{x_2 - x_1}$
+				\item Find the y-intercept using point-slope form
+				\item Write in slope-intercept form: $y = mx + b$
+			\end{itemize}
+
+			\newpage
+
+		\subsection*{Residuals}
+
+			A \textbf{residual} measures how far each data point is from the line of best fit.
+
+			\textbf{Formula:}
+			$$\text{Residual} = \text{Actual value} - \text{Predicted value}$$
+
+			\textbf{Interpretation:}
+			\begin{itemize}
+				\item \textbf{Positive residual}: data point is above the line
+				\item \textbf{Negative residual}: data point is below the line
+				\item \textbf{Zero residual}: data point is exactly on the line
+				\item Smaller residuals mean better fit
+			\end{itemize}
+
+		\subsection*{Interpreting Slope and y-Intercept}
+
+			\textbf{Slope ($m$):}
+			\begin{itemize}
+				\item Rate of change
+				\item How much $y$ changes for each 1-unit increase in $x$
+				\item Include units: ``For every [unit of $x$], [variable $y$] changes by [slope] [unit of $y$]''
+			\end{itemize}
+
+			\textbf{y-Intercept ($b$):}
+			\begin{itemize}
+				\item Starting value when $x = 0$
+				\item May or may not make sense in context
+				\item Include units: ``When [variable $x$] is 0, [variable $y$] is [y-intercept] [unit of $y$]''
+			\end{itemize}
+
+			\newpage
+
+	\section*{Worksheet 7.3: Linear Modeling}
+
+		\subsection*{Instructions}:
+			
+			For each problem,
+			\begin{enumerate}
+				\item Plot the data points on graph paper
+				\item Draw a line of best fit by eye
+				\item Find the equation using two points on your line
+				\item Calculate residuals for specified data points
+				\item Interpret the slope and y-intercept in context
+			\end{enumerate}
+
+			\newpage
+
+		\subsection*{Worksheet Problem 1: Temperature and Hot Chocolate Sales}
+
+			A café tracks hot chocolate sales at different temperatures.
+
+			\begin{center}
+				\begin{tabular}{|c|c|}
+					\hline
+					Temperature ($^\circ$F) & Hot Chocolates Sold \\
+					\hline
+					30 & 45 \\
+					35 & 42 \\
+					40 & 38 \\
+					45 & 35 \\
+					50 & 30 \\
+					55 & 28 \\
+					\hline
+				\end{tabular}
+			\end{center}
+
+			\subsubsection*{Part A}
+
+				Choose your scale:
+				\begin{itemize}
+					\item x-axis: Temperature from \underline{\hspace{1in}} to \underline{\hspace{1in}} (include units)
+					\item y-axis: Sales from \underline{\hspace{1in}} to \underline{\hspace{1in}} (include units)
+				\end{itemize}
+
+				Add your scale and label axes.\\\\
+				Plot the points.
+
+				\vspace{8cm}
+
+			\subsubsection*{Part B}
+				
+				Draw a line of best fit (using a different color).
+
+				\newpage
+
+			\subsubsection*{Part C}
+				
+				Choose two points ON your line and find the equation.
+
+				Point 1: $(\underline{\hspace{1in}}, \underline{\hspace{1in}})$
+
+				Point 2: $(\underline{\hspace{1in}}, \underline{\hspace{1in}})$
+
+				Calculate the slope:
+
+				\vspace{2cm}
+
+				Find the y-intercept using point-slope form:
+
+				\vspace{2cm}
+
+				Equation: \underline{\hspace{3in}}
+
+			\subsubsection*{Part D}
+			
+				Calculate residuals for $x = 30$, $x = 40$, and $x = 50$:
+
+				For $x = 30$:
+				\begin{itemize}
+					\item Actual value: \underline{\hspace{1in}}
+					\item Predicted value (from equation): \underline{\hspace{1in}}
+					\item Residual = Actual $-$ Predicted = \underline{\hspace{1in}}
+				\end{itemize}
+
+				For $x = 40$:
+				\begin{itemize}
+					\item Actual value: \underline{\hspace{1in}}
+					\item Predicted value: \underline{\hspace{1in}}
+					\item Residual = \underline{\hspace{1in}}
+				\end{itemize}
+
+				For $x = 50$:
+				\begin{itemize}
+					\item Actual value: \underline{\hspace{1in}}
+					\item Predicted value: \underline{\hspace{1in}}
+					\item Residual = \underline{\hspace{1in}}
+				\end{itemize}
+
+				\newpage
+
+			\subsubsection*{Part E}
+			
+				Interpret the slope in context:
+
+				For every \underline{\hspace{2in}} (include units) increase in temperature,
+
+				the number of hot chocolates sold
+				
+				\underline{\hspace{2in}} (increases/decreases) by about \underline{\hspace{1.4in}} (include units).
+
+			\subsubsection*{Part F}
+			
+				Interpret the y-intercept in context:
+
+				When the temperature is $0^\circ$F, the model predicts \underline{\hspace{1in}} hot chocolates sold.
+
+			\subsubsection*{Part G}
+			
+				Does the y-intercept make sense in this context? Why or why not?
+
+				\vspace{3cm}
+
+			\subsubsection*{Part H}
+			
+				Use your model to predict sales at $60^\circ$F:
+
+				\vspace{2cm}
+
+				Is this prediction reasonable? Explain.
+
+				\vspace{2cm}
+
+				\newpage
+
+		\subsection*{Worksheet Problem 2: Study Time and Quiz Score}
+
+			A teacher tracks student study time and quiz scores.
+
+			\begin{center}
+				\begin{tabular}{|c|c|}
+					\hline
+					Study Time (hours) & Quiz Score (\%) \\
+					\hline
+					0.25 & 67 \\
+					0.5 & 70 \\
+					0.75 & 73 \\
+					1.0 & 79 \\
+					1.25 & 88 \\
+					1.5 & 93 \\
+					\hline
+				\end{tabular}
+			\end{center}
+
+			\subsubsection*{Part A}
+			
+				Add a scale and label axes.\\\\
+				Plot the points.
+
+				\vspace{8cm}
+
+			\subsubsection*{Part B}
+
+				Draw a line of best fit (using a different color).
+
+				\newpage
+
+			\subsubsection*{Part C}
+
+				Find the equation of the line of best fit using two points on your line.
+
+				\vspace{5cm}
+
+			\subsubsection*{Part D}
+				
+				Calculate residuals for $x = 0.5$, $x = 1.0$, and $x = 1.5$:
+
+				\vspace{5cm}
+
+			\subsubsection*{Part E}
+				
+				Use your model to predict the quiz score for someone who studies 4 hours:
+
+				\vspace{2cm}
+
+			\subsubsection*{Part F}
+			
+				Is this prediction reasonable? Why or why not?
+
+				(Hint: Can quiz scores go above 100\%?)
+
+				\vspace{2cm}
+
+				\newpage
+
+		\subsection*{Worksheet Problem 3: Car Value Over Time}
+
+			A used car dealer tracks how a car's value changes with age.
+
+			\begin{center}
+				\begin{tabular}{|c|c|}
+					\hline
+					Car Age (years) & Value (\$1000s) \\
+					\hline
+					1 & 23 \\
+					2 & 20 \\
+					3 & 17 \\
+					4 & 15 \\
+					5 & 12 \\
+					6 & 9 \\
+					\hline
+				\end{tabular}
+			\end{center}
+
+			\subsubsection*{Part A}
+			
+				Add a scale and label axes.\\\\
+				Plot the points.
+
+				\vspace{8cm}
+
+			\subsubsection*{Part B}
+			
+				Draw a line of best fit (using a different color).
+
+				\newpage
+
+			\subsubsection*{Part C}
+			
+				Find the equation of the line of best fit.
+
+				\vspace{4cm}
+
+			\subsubsection*{Part D}
+			
+				What does the y-intercept represent?
+
+				\vspace{2cm}
+
+				Does this make sense? (What was the car worth when new?)
+
+				\vspace{2cm}
+
+			\subsubsection*{Part E}
+			
+				According to your model, when will the car be worth \$0?
+
+				\vspace{3cm}
+
+			\subsubsection*{Part F}
+			
+				Is this prediction realistic? Why or why not?
+
+				\vspace{3cm}
+
+				\newpage
+
+		\subsection*{Worksheet Problem 4: Plant Growth}
+
+			A biology student measures plant height over time.
+
+			\begin{center}
+				\begin{tabular}{|c|c|}
+					\hline
+					Days & Height (cm) \\
+					\hline
+					0 & 3 \\
+					5 & 5 \\
+					10 & 9 \\
+					15 & 12 \\
+					20 & 15 \\
+					25 & 17 \\
+					\hline
+				\end{tabular}
+			\end{center}
+
+			\subsubsection*{Part A}
+			
+				Add a scale and label axes.\\\\
+				Plot the points.\\\\
+				Draw a line of best fit (using a different color).
+
+				\vspace{8cm}
+
+			\subsubsection*{Part B}
+			
+				Find the equation of the line of best fit.
+
+				\newpage
+
+			\subsubsection*{Part C}
+			
+				Interpret the y-intercept:
+
+				\vspace{2cm}
+
+			\subsubsection*{Part D}
+			
+				Calculate the residual for day 10:
+
+				\vspace{3cm}
+
+			\subsubsection*{Part E}
+			
+				Predict the height after 30 days:
+
+				\vspace{2cm}
+
+			\subsubsection*{Part F}
+			
+				If the plant can only grow to a maximum of 25 cm,\\
+				when will it reach this height according to your model?
+
+\end{document}
