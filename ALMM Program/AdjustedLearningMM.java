@@ -117,21 +117,21 @@ public class AdjustedLearningMM
         }
         else
         {
-            System.out.println("stay the same.");
+            System.out.print("stay the same.");
             return;
         }
 
         if (Math.abs(d) >= 0.7)
         {
-            System.out.println("siginificantly.");
+            System.out.print("siginificantly.");
         }
         else if (Math.abs(d) > 0.3)
         {
-            System.out.println("moderately.");
+            System.out.print("moderately.");
         }
         else
         {
-            System.out.println("slightly.");
+            System.out.print("slightly.");
         }
 
         return;
@@ -152,21 +152,21 @@ public class AdjustedLearningMM
         }
         else
         {
-            System.out.println("stay the same.");
+            System.out.print("stay the same.");
             return;
         }
 
         if (Math.abs(s) >= 0.7)
         {
-            System.out.println("siginificantly.");
+            System.out.print("siginificantly.");
         }
         else if (Math.abs(s) > 0.3)
         {
-            System.out.println("moderately.");
+            System.out.print("moderately.");
         }
         else
         {
-            System.out.println("slightly.");
+            System.out.print("slightly.");
         }
 
         return;
@@ -219,12 +219,13 @@ public class AdjustedLearningMM
         printDifficultyRecommendation(d);
         printSupportRecommendation(s);
         printTimeRecommendation(t);
+        System.out.println();
     }
 
     // Main method
     public static void main(String[] args)
     {
-        //System.out.println("Adjusted Learning Matrix Model\n");
+        System.out.println("\nAdjusted Learning Matrix Model:\n");
         
         AdjustedLearningMM almm = new AdjustedLearningMM();
 
