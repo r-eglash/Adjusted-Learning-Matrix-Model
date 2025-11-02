@@ -1,0 +1,284 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{8pt}
+
+\title{Week 5: Systems of Linear Equations}
+\author{
+	Student: SA\\
+	Tutor: Rachel Eglash}
+\date{October 3, 2025}
+
+\begin{document}
+	
+	\maketitle
+
+	\section*{Week 5 Quiz}
+        
+        \subsection*{5.1: Systems of linear equations: elimination (standard form set-up, clean arithmetic)}
+
+	    \subsection*{5.2: Systems: applications \& modeling (set up from word problems)}
+        
+        \subsection*{5.3: Systems: substitution; classify (one/none/infinite)}
+	    
+            \newpage
+	
+	\section*{Quick Reference: Equations, Definitions, \& Formulas}
+	
+        \subsection*{Slope-Intercept Form}
+            $y = mx + b$\\\\
+            where $m$ is the slope and $b$ is the y-intercept.
+
+	    \subsection*{Point-Slope Form}
+        	$y - y_1 = m(x - x_1)$\\\\
+            where $m$ is the slope and $(x_1, y_1)$ is a point on the line.
+	
+	    \subsection*{Slope Formula}
+        	$m = \frac{y_2 - y_1}{x_2 - x_1}$\\\\
+            The slope between two points $(x_1, y_1)$ and $(x_2, y_2)$.
+
+        \subsection*{Types of Systems}
+            \begin{itemize}
+                \item \textbf{One solution:} Lines intersect at one point (different slopes)
+                \item \textbf{No solutions:} Lines are parallel (same slope, different y-intercepts)
+                \item \textbf{Infinitely many solutions:} Lines are the same (same slope, same y-intercept)
+            \end{itemize}
+
+        \subsection*{Solution Methods}
+            \begin{itemize}
+                \item \textbf{Substitution:} Solve one equation for a variable, substitute into the other
+                \item \textbf{Elimination:} Add or subtract equations to eliminate a variable
+                \item \textbf{Graphing:} Graph both lines and find the intersection point
+            \end{itemize}
+
+            \newpage
+
+    \section*{Week 5 Quiz: Systems of Linear Equations}
+	
+        \subsection*{Part A: Writing Equations of Lines}
+            
+            \subsubsection*{Instructions: Find the equation of each line in slope-intercept form:}
+
+                \begin{enumerate}
+                    \item Find the equation of the line with a slope of 3 and a y-intercept of $-2$.
+                    \item Find the equation of the line with a slope of $\frac{2}{3}$ and contains the point $(6, 7)$.
+                    \item Find the equation of the line through the points $(3, 5)$ and $(-1, 9)$.
+                \end{enumerate}
+        
+        \subsection*{Part B: Graphing Systems}
+            
+            \subsubsection*{Instructions: Graph each line. Classify the system (one solution / no solutions / infinitely many solutions). Find the solution to the system.}
+
+                \begin{enumerate}
+                    \item $y = \frac{1}{2}x - 3$\\
+                    $y = -x + 3$
+                    
+                    \item $y = \frac{1}{3}x + 1$\\
+                    $x - 3y = -6$
+                \end{enumerate}
+        
+        \subsection*{Part C: Solving Systems Algebraically}
+            
+            \subsubsection*{Instructions: Solve the following systems of equations. Show all work.}
+
+                \begin{enumerate}
+                    \item $y = x - 6$\\
+                    $y = -x + 3$
+                    
+                    \item $y = -\frac{3}{2}x + 9$\\
+                    $3x + 2y = 18$
+                    
+                    \item $3y = -2x + 7$\\
+                    $-2y = 2x - 3$
+                \end{enumerate}
+
+                \newpage
+        
+        \subsection*{Part D: Word Problems}
+        
+            \subsubsection*{Instructions: Define variables (with units), determine the two equations in the system, solve the system, and state the final answer (with units).}
+
+                \begin{enumerate}
+                    \item Two gyms charge an enrollment fee plus an additional cost per month. Let $m$ be months and $C$ be total cost (in \$).\\
+                    Gym A charges \$35 per month with a \$100 enrollment fee.\\
+                    Gym B charges \$45 per month with a \$50 enrollment fee.\\
+                    Write an equation for the cost, $C$ (in \$), with respect to $m$ (in months), for both gyms.\\
+                    What is the number of months where both gyms have the same total cost (if it exists)?
+                    
+                    \item A school sold hats for a fundraiser in two sizes: small hats and large hats.\\
+                    There were 50 hats sold in total.\\
+                    Each small hat cost \$12.\\
+                    Each large hat cost \$7.\\
+                    The total for all the hats sold was \$490.\\
+                    How many of each type of hat was sold?
+                \end{enumerate}
+
+                \newpage
+
+    \section*{Solution Guide}
+
+        \subsection*{Part A: Writing Equations of Lines}
+
+            \textbf{1.} Find the equation of the line with a slope of 3 and a y-intercept of $-2$.
+
+                \textit{Solution:}\\
+                Use the slope-intercept form $y = mx + b$\\
+                $m = 3$, $b = -2$\\
+                $y = 3x - 2$
+
+                \fbox{Answer: $y = 3x - 2$}
+
+                \vspace{0.5cm}
+
+            \textbf{2.} Find the equation of the line with a slope of $\frac{2}{3}$ and contains the point $(6, 7)$.
+
+                \textit{Solution:}\\
+                Use the point-slope form $y - y_1 = m(x - x_1)$\\
+                $m = \frac{2}{3}$, $(x_1, y_1) = (6, 7)$\\
+                $y - 7 = \frac{2}{3}(x - 6)$\\
+                $y - 7 = \frac{2}{3}x - 4$\\
+                $y = \frac{2}{3}x + 3$
+
+                \fbox{Answer: $y = \frac{2}{3}x + 3$}
+
+                \vspace{0.5cm}
+
+            \textbf{3.} Find the equation of the line through the points $(3, 5)$ and $(-1, 9)$.
+
+                \textit{Solution:}\\
+                First find the slope:\\
+                $m = \frac{y_2 - y_1}{x_2 - x_1} = \frac{9 - 5}{-1 - 3} = \frac{4}{-4} = -1$\\
+                \\
+                Now use point-slope form with $(-1, 9)$:\\
+                $y - 9 = -1(x - (-1))$\\
+                $y - 9 = -x - 1$\\
+                $y = -x + 8$
+
+                \fbox{Answer: $y = -x + 8$}
+
+                \newpage
+
+        \subsection*{Part B: Graphing Systems}
+
+            \textbf{1.} $y = \frac{1}{2}x - 3$ and $y = -x + 3$
+
+                \textit{Solution:}\\
+                Set the equations equal:\\
+                $\frac{1}{2}x - 3 = -x + 3$\\
+                $\frac{3}{2}x = 6$\\
+                $x = 4$\\
+                \\
+                Substitute $x = 4$ into $y = -x + 3$:\\
+                $y = -4 + 3 = -1$
+
+                \fbox{Answer: One solution, $(4, -1)$}
+
+                \vspace{0.5cm}
+
+            \textbf{2.} $y = \frac{1}{3}x + 1$ and $x - 3y = -6$
+
+                \textit{Solution:}\\
+                Use substitution method:\\
+                $x - 3\left(\frac{1}{3}x + 1\right) = -6$\\
+                $x - x - 3 = -6$\\
+                $-3 = -6$\\
+                \\
+                This is a false statement, so the lines are parallel.
+
+                \fbox{Answer: No solutions (parallel lines)}
+
+                \newpage
+
+        \subsection*{Part C: Solving Systems Algebraically}
+
+            \textbf{1.} $y = x - 6$ and $y = -x + 3$
+
+                \textit{Solution:}\\
+                Use substitution method:\\
+                $x - 6 = -x + 3$\\
+                $2x = 9$\\
+                $x = \frac{9}{2}$\\
+                \\
+                Substitute into $y = x - 6$:\\
+                $y = \frac{9}{2} - 6 = \frac{9}{2} - \frac{12}{2} = -\frac{3}{2}$
+
+                \fbox{Answer: $\left(\frac{9}{2}, -\frac{3}{2}\right) = (4.5, -1.5)$}
+
+                \vspace{0.5cm}
+
+            \textbf{2.} $y = -\frac{3}{2}x + 9$ and $3x + 2y = 18$
+
+                \textit{Solution:}\\
+                Use substitution method:\\
+                $3x + 2\left(-\frac{3}{2}x + 9\right) = 18$\\
+                $3x - 3x + 18 = 18$\\
+                $18 = 18$\\
+                \\
+                This is always true, so the lines are the same.
+
+                \fbox{Answer: Infinitely many solutions (same line)}
+
+                \vspace{0.5cm}
+
+            \textbf{3.} $3y = -2x + 7$ and $-2y = 2x - 3$
+
+                \textit{Solution:}\\
+                Use elimination method (add the equations):\\
+                $3y = -2x + 7$\\
+                $-2y = 2x - 3$\\
+                $\rule{3cm}{0.4pt}$\\
+                $y = 4$\\
+                \\
+                Substitute $y = 4$ into $-2y = 2x - 3$:\\
+                $-2(4) = 2x - 3$\\
+                $-8 = 2x - 3$\\
+                $2x = -5$\\
+                $x = -\frac{5}{2}$
+
+                \fbox{Answer: $\left(-\frac{5}{2}, 4\right)$}
+
+                \newpage
+
+        \subsection*{Part D: Word Problems}
+
+            \textbf{1.} Two gyms charge an enrollment fee plus an additional cost per month.
+
+                \textit{Solution:}\\
+                Variables: Let $m$ = months, $C$ = total cost (in \$)\\
+                \\
+                Gym A: $C = 35m + 100$\\
+                Gym B: $C = 45m + 50$\\
+                \\
+                Set equal and solve:\\
+                $35m + 100 = 45m + 50$\\
+                $50 = 10m$\\
+                $m = 5$
+
+                \fbox{Answer: 5 months}
+
+                \vspace{0.5cm}
+
+            \textbf{2.} A school sold hats for a fundraiser in two sizes.
+
+                \textit{Solution:}\\
+                Variables: Let $S$ = number of small hats, $L$ = number of large hats\\
+                \\
+                Equations:\\
+                $S + L = 50$ (total hats)\\
+                $12S + 7L = 490$ (total cost)\\
+                \\
+                Use substitution method:\\
+                $L = 50 - S$\\
+                $12S + 7(50 - S) = 490$\\
+                $12S + 350 - 7S = 490$\\
+                $5S = 140$\\
+                $S = 28$\\
+                \\
+                Substitute back:\\
+                $L = 50 - 28 = 22$
+
+                \fbox{Answer: 28 small hats \& 22 large hats}
+
+\end{document}
