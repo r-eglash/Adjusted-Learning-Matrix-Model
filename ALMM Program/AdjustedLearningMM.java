@@ -252,39 +252,49 @@ public class AdjustedLearningMM
         }
     }
 
-    // Method to print time recommendation
-    static void printTimeRecommendation(double t)
+    /**
+     * Prints time/pacing recommendation based on adjustment value
+     * @param t - Pacing adjustment value (negative = slow down, positive = speed up)
+     */
+    public static void printTimeRecommendation(double t)
     {
+        // Start the recommendation message
         System.out.print("\nThe pacing should ");
 
+        // Determine direction of adjustment
         if (t < 0)
         {
+            // Negative value means slow down
             System.out.print("slow down ");
         }
         else if (t > 0)
         {
+            // Positive value means speed up
             System.out.print("speed up ");
         }
         else
         {
+            // Zero means no change needed
             System.out.println("stay the same.");
             return;
         }
 
+        // Determine magnitude of adjustment based on absolute value
         if (Math.abs(t) >= 0.7)
         {
-            System.out.println("siginificantly.");
+            // Large adjustment needed (|t| >= 0.7)
+            System.out.println("significantly.");
         }
         else if (Math.abs(t) > 0.3)
         {
+            // Moderate adjustment needed (0.3 < |t| < 0.7)
             System.out.println("moderately.");
         }
         else
         {
+            // Small adjustment needed (|t| <= 0.3)
             System.out.println("slightly.");
         }
-
-        return;
     }
     
     // Method to print all recommendations
