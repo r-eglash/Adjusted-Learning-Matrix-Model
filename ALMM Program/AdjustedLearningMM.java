@@ -107,26 +107,38 @@ public class AdjustedLearningMM
         return adjustedLearningMatrix;
     }
 
-    // Method for matrix multiplication
-    double[][] matrixMultiply(double[][] tMatrix, double[][] inMatrix)
+    /**
+     * Performs matrix multiplication
+     * @param tMatrix - First matrix (transformation matrix)
+     * @param inMatrix - Second matrix (input matrix)
+     * @return Result of matrix multiplication
+     */
+    public double[][] matrixMultiply(double[][] tMatrix, double[][] inMatrix)
     {
-        int inMatrixRows = inMatrix.length;
-        int inMatrixCols = inMatrix[0].length;
-        int tMatrixCols = tMatrix[0].length;
+        // Get dimensions of input matrix
+        int tMatrixRows = tMatrix.length;        // Number of rows in transformation matrix
+        int tMatrixCols = tMatrix[0].length;     // Number of columns in transformation matrix
+        int inMatrixCols = inMatrix[0].length;   // Number of columns in input matrix
 
-        double[][] outMatrix = new double[inMatrixRows][tMatrixCols];
+        // Initialize output matrix with appropriate dimensions
+        double[][] outMatrix = new double[tMatrixRows][inMatrixCols];
 
-        for (int i = 0; i < inMatrixRows; i++)
+        // Iterate through rows of first matrix
+        for (int i = 0; i < tMatrixRows; i++)
         {
-            for (int j = 0; j < tMatrixCols; j++)
+            // Iterate through columns of second matrix
+            for (int j = 0; j < inMatrixCols; j++)
             {
-                for (int k = 0; k < inMatrixCols; k++)
+                // Perform dot product of row i and column j
+                for (int k = 0; k < tMatrixCols; k++)
                 {
-                    outMatrix[i][j] += inMatrix[i][k] * tMatrix[k][j];
+                    // Multiply corresponding elements and accumulate sum
+                    outMatrix[i][j] += tMatrix[i][k] * inMatrix[k][j];
                 }
             }
         }
 
+        // Return the result matrix
         return outMatrix;
     }
 
