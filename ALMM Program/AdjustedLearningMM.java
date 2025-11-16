@@ -207,39 +207,49 @@ public class AdjustedLearningMM
         }
     }
 
-    // Method to print support recommendation
-    static void printSupportRecommendation(double s)
+    /**
+     * Prints support recommendation based on adjustment value
+     * @param s - Support adjustment value (negative = increase, positive = decrease)
+     */
+    public static void printSupportRecommendation(double s)
     {
+        // Start the recommendation message
         System.out.print("\nThe support level should ");
 
+        // Determine direction of adjustment (inverse relationship)
         if (s < 0)
         {
+            // Negative value means increase support
             System.out.print("increase ");
         }
         else if (s > 0)
         {
+            // Positive value means decrease support
             System.out.print("decrease ");
         }
         else
         {
+            // Zero means no change needed
             System.out.print("stay the same.");
             return;
         }
 
+        // Determine magnitude of adjustment based on absolute value
         if (Math.abs(s) >= 0.7)
         {
-            System.out.print("siginificantly.");
+            // Large adjustment needed (|s| >= 0.7)
+            System.out.print("significantly.");
         }
         else if (Math.abs(s) > 0.3)
         {
+            // Moderate adjustment needed (0.3 < |s| < 0.7)
             System.out.print("moderately.");
         }
         else
         {
+            // Small adjustment needed (|s| <= 0.3)
             System.out.print("slightly.");
         }
-
-        return;
     }
 
     // Method to print time recommendation
