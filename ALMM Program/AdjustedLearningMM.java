@@ -1,17 +1,33 @@
 import java.util.Scanner;
 
+/**
+ * AdjustedLearningMM - Adjusted Learning Matrix Model
+ * This class analyzes student learning metrics and provides recommendations
+ * for difficulty, support, and pacing adjustments.
+ */
 public class AdjustedLearningMM
 {
-
-    static double[][] transformationMatrix =
+    // Instance variables
+    private double[][] transformationMatrix;
+    private int[][] inputMatrix;
+    private double[][] normalizedInputMatrix;
+    
+    /**
+     * Default constructor
+     * Initializes the transformation matrix with predefined weights
+     */
+    public AdjustedLearningMM()
     {
-        {0.35, 0.15, 0.15, 0.35},
-        {0.30, 0.30, 0.30, 0.10},
-        {0.30, 0.15, 0.15, 0.40},
-    };
-
-    //public int[][] inputMatrix;
-    //public int[][] normalizedInputMatrix;
+        // Initialize the transformation matrix (4x3)
+        // Each column represents: [Difficulty, Support, Time/Pacing]
+        // Each row represents weights for: [Independence, Confidence, Persistence, Accuracy]
+        this.transformationMatrix = new double[][]
+        {
+            {0.35, 0.15, 0.15, 0.35},  // Weights for difficulty adjustment
+            {0.30, 0.30, 0.30, 0.10},  // Weights for support adjustment
+            {0.30, 0.15, 0.15, 0.40},  // Weights for pacing adjustment
+        };
+    }
 
     // Method to get input matrix from user
     int[][] getInputMatrix()
@@ -249,4 +265,4 @@ public class AdjustedLearningMM
         printRecommendations(adjustedLearningMatrix);
     }
 
-}
+}                                                                                                                                                                     
