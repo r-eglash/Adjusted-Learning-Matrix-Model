@@ -142,15 +142,22 @@ public class AdjustedLearningMM
         return outMatrix;
     }
 
-    // Method to print a matrix
-    static void printMatrix(double[][] matrix)
+    /**
+     * Prints a matrix to console in formatted rows and columns
+     * @param matrix - The matrix to print
+     */
+    public static void printMatrix(double[][] matrix)
     {
+        // Iterate through each row
         for (int i = 0; i < matrix.length; i++)
         {
+            // Iterate through each column in the row
             for (int j = 0; j < matrix[i].length; j++)
             {
+                // Print the element with spacing
                 System.out.print(matrix[i][j] + "   ");
             }
+            // Move to next line after each row
             System.out.println();
         }
     }
