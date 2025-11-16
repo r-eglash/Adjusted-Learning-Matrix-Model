@@ -65,20 +65,30 @@ public class AdjustedLearningMM
         return this.inputMatrix;
     }
 
-    // Method to normalize the input matrix
-    double[][] getNormalizedInputMatrix()
+    /**
+     * Normalizes the input matrix values to range [-1, 1]
+     * Formula: (value - 5) / 5.0
+     * This centers the 0-10 scale around 0
+     * @return 4x1 normalized matrix
+     */
+    public double[][] getNormalizedInputMatrix()
     {        
-        // Call getInputMatri to populate the input matrix
-        int[][] inputMatrix = getInputMatrix();
+        // Get user input and populate the input matrix
+        this.inputMatrix = getInputMatrix();
 
-        double[][] normalizedInputMatrix = new double[4][1];
+        // Initialize normalized matrix with same dimensions
+        this.normalizedInputMatrix = new double[4][1];
 
+        // Iterate through each input value
         for (int i = 0; i < 4; i++)
         {
-            normalizedInputMatrix[i][0] = (inputMatrix[i][0] - 5) / 5.0;
-        } 
+            // Normalize: subtract midpoint (5) and divide by range (5)
+            // This maps 0->-1, 5->0, 10->1
+            this.normalizedInputMatrix[i][0] = (this.inputMatrix[i][0] - 5) / 5.0;
+        }
 
-        return normalizedInputMatrix;
+        // Return the normalized matrix
+        return this.normalizedInputMatrix;
     }
 
     // Method to calculate the adjusted learning matrix
