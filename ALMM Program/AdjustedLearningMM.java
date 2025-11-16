@@ -297,21 +297,29 @@ public class AdjustedLearningMM
         }
     }
     
-    // Method to print all recommendations
-    static void printRecommendations(double[][] adjustedLearningMatrix)
+    /**
+     * Prints all recommendations based on adjusted learning matrix
+     * @param adjustedLearningMatrix - 3x1 matrix containing [Difficulty, Support, Pacing]
+     */
+    public static void printRecommendations(double[][] adjustedLearningMatrix)
     {
-        double d = adjustedLearningMatrix[0][0];
-        double s = adjustedLearningMatrix[1][0];
-        double t = adjustedLearningMatrix[2][0];
+        // Extract individual adjustment values from matrix
+        double d = adjustedLearningMatrix[0][0];  // Difficulty adjustment
+        double s = adjustedLearningMatrix[1][0];  // Support adjustment
+        double t = adjustedLearningMatrix[2][0];  // Pacing adjustment
 
+        // Print header
         System.out.println("\nRecommendations:");
 
+        // Print each recommendation
         printDifficultyRecommendation(d);
         printSupportRecommendation(s);
         printTimeRecommendation(t);
+        
+        // Add final newline for formatting
         System.out.println();
     }
-
+    
     // Main method
     public static void main(String[] args)
     {
