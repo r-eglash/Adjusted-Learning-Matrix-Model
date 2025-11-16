@@ -319,26 +319,36 @@ public class AdjustedLearningMM
         // Add final newline for formatting
         System.out.println();
     }
-    
-    // Main method
+
+     /**
+     * Main method - entry point of the program
+     * @param args - Command line arguments (not used)
+     */
     public static void main(String[] args)
     {
+        // Print program header
         System.out.println("\nAdjusted Learning Matrix Model:\n");
         
+        // Create instance of the class using default constructor
         AdjustedLearningMM almm = new AdjustedLearningMM();
 
+        // Get and normalize user input
         double[][] normalizedInputMatrix = almm.getNormalizedInputMatrix();
         
-        // Print the adjusted input matrix
+        // Print the normalized input matrix
         //System.out.println("\nNormalized Input Matrix:");
         //printMatrix(normalizedInputMatrix);
 
         // Print the transformation matrix
         //System.out.println("\nTransformation Matrix:");
-        //printMatrix(transformationMatrix);
+        //printMatrix(almm.transformationMatrix);
 
-        double[][] adjustedLearningMatrix = almm.getAdjustedLearningMatrix(normalizedInputMatrix, transformationMatrix);
-
+        // Calculate adjusted learning matrix
+        double[][] adjustedLearningMatrix = almm.getAdjustedLearningMatrix(
+            normalizedInputMatrix, 
+            almm.transformationMatrix
+        );
+    
         // Print the adjusted learning matrix
         //System.out.println("\nAdjusted Learning Matrix:");
         //printMatrix(adjustedLearningMatrix);
