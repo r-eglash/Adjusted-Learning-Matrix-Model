@@ -91,12 +91,19 @@ public class AdjustedLearningMM
         return this.normalizedInputMatrix;
     }
 
-    // Method to calculate the adjusted learning matrix
-    double[][] getAdjustedLearningMatrix(double[][] normalizedInputMatrix, double[][] transformationMatrix)
+    /**
+     * Calculates the adjusted learning matrix by multiplying
+     * transformation matrix with normalized input
+     * @param normalizedInputMatrix - 4x1 normalized input values
+     * @param transformationMatrix - 3x4 transformation weights
+     * @return 3x1 matrix with adjustment values for [Difficulty, Support, Pacing]
+     */
+    public double[][] getAdjustedLearningMatrix(double[][] normalizedInputMatrix, double[][] transformationMatrix)
     {
-        
-        double[][] adjustedLearningMatrix = matrixMultiply(normalizedInputMatrix, transformationMatrix);
+        // Perform matrix multiplication: (3x4) * (4x1) = (3x1)
+        double[][] adjustedLearningMatrix = matrixMultiply(transformationMatrix, normalizedInputMatrix);
 
+        // Return the resulting adjustment matrix
         return adjustedLearningMatrix;
     }
 
