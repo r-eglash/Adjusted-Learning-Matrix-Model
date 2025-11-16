@@ -162,39 +162,49 @@ public class AdjustedLearningMM
         }
     }
 
-    // Method to print difficulty recommendation
-    static void printDifficultyRecommendation(double d)
+    /**
+     * Prints difficulty recommendation based on adjustment value
+     * @param d - Difficulty adjustment value (negative = decrease, positive = increase)
+     */
+    public static void printDifficultyRecommendation(double d)
     {
+        // Start the recommendation message
         System.out.print("\nThe difficulty level should ");
 
+        // Determine direction of adjustment
         if (d < 0)
         {
+            // Negative value means decrease difficulty
             System.out.print("decrease ");
         }
         else if (d > 0)
         {
+            // Positive value means increase difficulty
             System.out.print("increase ");
         }
         else
         {
+            // Zero means no change needed
             System.out.print("stay the same.");
             return;
         }
 
+        // Determine magnitude of adjustment based on absolute value
         if (Math.abs(d) >= 0.7)
         {
-            System.out.print("siginificantly.");
+            // Large adjustment needed (|d| >= 0.7)
+            System.out.print("significantly.");
         }
         else if (Math.abs(d) > 0.3)
         {
+            // Moderate adjustment needed (0.3 < |d| < 0.7)
             System.out.print("moderately.");
         }
         else
         {
+            // Small adjustment needed (|d| <= 0.3)
             System.out.print("slightly.");
         }
-
-        return;
     }
 
     // Method to print support recommendation
