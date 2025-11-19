@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/racheleglash/Math2B-Project-Fall-2025/main'
+relocations:     []
+...
