@@ -10,7 +10,7 @@ import java.util.*;
  * Output Matrix (y): Tactical decisions [Aggression, Defensiveness, ResourceUsage]
  */
 
-class Pokemon
+class PokemonCharacter
 {
     String name;
     int hp;
@@ -18,7 +18,7 @@ class Pokemon
     int defense;
     int speed;
     
-    public Pokemon(String name, int hp, int attack, int defense, int speed)
+    public PokemonCharacter(String name, int hp, int attack, int defense, int speed)
     {
         this.name = name;
         this.hp = hp;
@@ -100,7 +100,7 @@ class TacticalDecision
     
     public void printDecision()
     {
-        System.out.println("\nTactical Deficion Output:");
+        System.out.println("\nTactical Decision Output:");
         System.out.printf("Recommended Action: %s\n\n", getRecommendedAction());
         
         System.out.printf("Aggression Level: %s (%.3f)\n", 
@@ -153,9 +153,9 @@ public class RPGDecisionMatrix
      * Download from: https://github.com/lgreski/pokemonData/blob/master/Pokemon.csv
      * Click "Raw" button to download
      */
-    public static List<Pokemon> loadPokemonData(String filename)
+    public static List<PokemonCharacter> loadPokemonData(String filename)
     {
-        List<Pokemon> pokemonList = new ArrayList<>();
+        List<PokemonCharacter> pokemonList = new ArrayList<>();
         
         try (BufferedReader br = new BufferedReader(new FileReader(filename)))
         {
@@ -175,7 +175,7 @@ public class RPGDecisionMatrix
                         int defense = Integer.parseInt(values[7].trim());
                         int speed = Integer.parseInt(values[10].trim());
                         
-                        pokemonList.add(new Pokemon(name, hp, attack, defense, speed));
+                        pokemonList.add(new PokemonCharacter(name, hp, attack, defense, speed));
                     }
                     catch (NumberFormatException e)
                     {
@@ -200,7 +200,7 @@ public class RPGDecisionMatrix
     /**
      * Estimate battle state from Pokemon stats
      */
-    public static BattleState estimateBattleState(Pokemon player, Pokemon enemy)
+    public static BattleState estimateBattleState(PokemonCharacter player, PokemonCharacter enemy)
     {
         // Normalize stats to 0-10 scale
         double hpRatio = (double) player.hp / Math.max(player.hp, enemy.hp);
@@ -239,9 +239,9 @@ public class RPGDecisionMatrix
         System.out.println("");
     }
 
-    public static void manualBattleStateInput()
+    public static void manualBattleStateInput(Scanner scanner)
     {
-        Scanner scanner = new Scanner(System.in);
+        // Scanner scanner = new Scanner(System.in);
 
         System.out.println("\n--- Enter Battle State (0-10 scale) ---");
         System.out.print("Current HP (0=critical, 10=full): ");
@@ -264,32 +264,30 @@ public class RPGDecisionMatrix
         System.out.printf("[%.3f, %.3f, %.3f, %.3f]\n", inputs[0], inputs[1], inputs[2], inputs[3]);
                 
         decision.printDecision();
-
-        scanner.close(); // Do not close to avoid closing System.in
     }
 
-    public static void pokemonBattle(List<Pokemon> pokemon)
+    public static void pokemonBattle(List<PokemonCharacter> pokemonCharacter, Scanner scanner)
     {
-        Scanner scanner = new Scanner(System.in);
+        // Scanner scanner = new Scanner(System.in);
 
         // Pokemon battle
         System.out.println("\nPokemon Battle Simulation");
         System.out.println("Available Pokemon:");
-        for (int i = 0; i < pokemon.size(); i++)
+        for (int i = 0; i < pokemonCharacter.size(); i++)
         {
-            System.out.println("  " + (i+1) + ". " + pokemon.get(i).name);
+            System.out.println("  " + (i+1) + ". " + pokemonCharacter.get(i).name);
         }
                 
-        System.out.print("\nChoose your Pokemon (1-" + pokemon.size() + "): ");
+        System.out.print("\nChoose your Pokemon (1-" + pokemonCharacter.size() + "): ");
         int p1 = scanner.nextInt() - 1;
                 
-        System.out.print("Choose enemy Pokemon (1-" + pokemon.size() + "): ");
+        System.out.print("Choose enemy Pokemon (1-" + pokemonCharacter.size() + "): ");
         int p2 = scanner.nextInt() - 1;
                 
-        if (p1 >= 0 && p1 < pokemon.size() && p2 >= 0 && p2 < pokemon.size())
+        if (p1 >= 0 && p1 < pokemonCharacter.size() && p2 >= 0 && p2 < pokemonCharacter.size())
         {
-            Pokemon player = pokemon.get(p1);
-            Pokemon enemy = pokemon.get(p2);
+            PokemonCharacter player = pokemonCharacter.get(p1);
+            PokemonCharacter enemy = pokemonCharacter.get(p2);
                     
             System.out.println("\n" + player.name + " vs " + enemy.name);
             System.out.println(player);
@@ -306,7 +304,6 @@ public class RPGDecisionMatrix
                     
             decision.printDecision();
         }
-        scanner.close();
     }
     
     public static void testExtremeScenarios()
@@ -333,19 +330,19 @@ public class RPGDecisionMatrix
         System.out.println("\nRPG Battle Decision Matrix System\n");
     
         // Try to load Pokemon data
-        List<Pokemon> pokemon = loadPokemonData("Pokemon.csv");
+        List<PokemonCharacter> pokemonCharacter = loadPokemonData("/Users/racheleglash/Adjusted-Learning-Matrix-Model/Adjusted-Learning-Matrix-Model/ALMM Program/Pokemon.csv");
         
-        if (pokemon.isEmpty())
+        if (pokemonCharacter.isEmpty())
         {
             System.out.println("\nNo Pokemon data loaded.");
         }
         else
         {
-            System.out.println("\nLoaded " + pokemon.size() + " Pokemon!");
+            System.out.println("\nLoaded " + pokemonCharacter.size() + " Pokemon!");
             System.out.println("\nFirst 5 Pokemon:");
-            for (int i = 0; i < Math.min(5, pokemon.size()); i++)
+            for (int i = 0; i < Math.min(5, pokemonCharacter.size()); i++)
             {
-                System.out.println("  " + (i+1) + ". " + pokemon.get(i));
+                System.out.println("  " + (i+1) + ". " + pokemonCharacter.get(i));
             }
         }
         
@@ -358,16 +355,17 @@ public class RPGDecisionMatrix
             System.out.println("4. Test Extreme Scenarios");
             System.out.println("5. Exit");
             System.out.print("\nChoice: ");
-            
+    
             int choice = scanner.nextInt();
-            
+            scanner.nextLine();
+
             if (choice == 1)
             {
-                manualBattleStateInput();
+                manualBattleStateInput(scanner);
             }
-            else if (choice == 2 && !pokemon.isEmpty())
+            else if (choice == 2 && !pokemonCharacter.isEmpty())
             {
-                pokemonBattle(pokemon);
+                pokemonBattle(pokemonCharacter, scanner);
             }
             else if (choice == 3)
             {
