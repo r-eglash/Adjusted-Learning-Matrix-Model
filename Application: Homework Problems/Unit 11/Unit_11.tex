@@ -1,0 +1,871 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{tikz}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{8pt}
+
+\title{Unit 11: Quadratic Formula \& Applications}
+\author{
+	Student: SA\\
+	Tutor: Rachel Eglash}
+\date{November 2025}
+
+\begin{document}
+	
+	\maketitle
+    
+    \newpage
+
+	\section*{Session 11.1: \\ Quadratic Formula, Discriminant, Number of Solutions}
+
+		\subsection*{The Quadratic Formula}
+
+			For any quadratic equation in standard form $ax^2 + bx + c = 0$ where $a \neq 0$:
+
+			$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
+
+			This formula gives you the solutions (roots) of the equation.
+
+		\subsection*{Using the Quadratic Formula}
+
+			\textbf{Steps:}
+			\begin{enumerate}
+				\item Write the equation in standard form: $ax^2 + bx + c = 0$
+				\item Identify $a$, $b$, and $c$
+				\item Substitute into the formula
+				\item Simplify under the square root first
+				\item Simplify the entire expression
+				\item Write two solutions using the $\pm$ symbol
+			\end{enumerate}
+
+		\subsection*{The Discriminant}
+
+			The discriminant is the expression under the square root: $b^2 - 4ac$
+
+			The discriminant tells you how many real solutions the equation has:
+
+			\textbf{If $b^2 - 4ac > 0$:} Two different real solutions
+
+			\textbf{If $b^2 - 4ac = 0$:} One real solution (a repeated root)
+
+			\textbf{If $b^2 - 4ac < 0$:} No real solutions (two complex solutions)
+
+		\subsection*{Simplifying Square Roots}
+
+			Remember to simplify radicals in your final answer.
+
+			If you have a common factor in the numerator, factor it out.
+
+		\newpage
+
+	\section*{Homework 11.1: \\ Quadratic Formula, Discriminant, Number of Solutions}
+
+		\subsection*{Part A: Identify $a$, $b$, and $c$}
+
+			For each equation, identify the values of $a$, $b$, and $c$.\\\\
+
+			\textbf{Problem 1:}
+            
+            $x^2 + 5x + 6 = 0$
+
+			\vspace{1.5cm}
+
+			$a = $ \underline{\hspace{1in}} \quad $b = $ \underline{\hspace{1in}} \quad $c = $ \underline{\hspace{1in}}
+
+			\vspace{1cm}
+
+			\textbf{Problem 2:}
+            
+            $3x^2 - 7x + 2 = 0$
+
+			\vspace{1.5cm}
+
+			$a = $ \underline{\hspace{1in}} \quad $b = $ \underline{\hspace{1in}} \quad $c = $ \underline{\hspace{1in}}
+
+			\vspace{1cm}
+
+			\textbf{Problem 3:}
+            
+            $2x^2 + 8x = 10$
+
+			\vspace{1.5cm}
+
+			First rewrite in standard form: \underline{\hspace{3in}}
+
+			\vspace{1.5cm}
+
+			$a = $ \underline{\hspace{1in}} \quad $b = $ \underline{\hspace{1in}} \quad $c = $ \underline{\hspace{1in}}
+
+			\newpage
+
+		\subsection*{Part B: Use the Discriminant}
+
+			Find the discriminant and determine the number of real solutions.\\\\
+
+			\textbf{Problem 4:}
+            
+            $x^2 + 6x + 9 = 0$
+
+			\vspace{2.7cm}
+
+			Discriminant: \underline{\hspace{2in}}
+
+			\vspace{0.5cm}
+
+			Number of real solutions: \underline{\hspace{2in}}
+
+			\vspace{0.5cm}
+
+			\textbf{Problem 5:}
+            
+            $x^2 + 6x - 9 = 0$
+
+			\vspace{2.7cm}
+
+			Discriminant: \underline{\hspace{2in}}
+
+			\vspace{0.5cm}
+
+			Number of real solutions: \underline{\hspace{2in}}
+
+			\vspace{0.5cm}
+
+			\textbf{Problem 6:}
+            
+            $2x^2 + 6x + 9 = 0$
+
+			\vspace{2.7cm}
+
+			Discriminant: \underline{\hspace{2in}}
+
+			\vspace{0.5cm}
+
+			Number of real solutions: \underline{\hspace{2in}}
+
+			\newpage
+
+		\subsection*{Part C: Solve Using the Quadratic Formula}
+
+			Solve each equation using the quadratic formula. Show all work.\\
+
+			Give exact answers (simplified radicals when needed).\\\\
+
+			\textbf{Problem 7:}
+            
+            $x^2 + 3x - 4 = 0$
+
+			\vspace{5cm}
+
+			\textbf{Problem 8:}
+            
+            $x^2 - 8x + 16 = 0$
+
+			\vspace{5cm}
+
+			\textbf{Problem 9:}
+            
+            $2x^2 + 8x + 9 = 0$
+
+			\newpage
+
+		\subsection*{Part D: Equations That Need Rearranging}
+
+			First rewrite in standard form, then solve using the quadratic formula.\\\\
+
+			\textbf{Problem 10:}
+            
+            $-x^2 = 4x - 6$
+
+			\vspace{6cm}
+
+			\textbf{Problem 11:}
+            
+            $2x^2 + 8 = 10x$
+
+			\newpage
+
+		\subsection*{Part E: Challenge Problems}
+
+
+			\textbf{Problem 12:}\\
+
+			Find a value of $c$ so that $x^2 + 12x + c = 0$ has exactly one real solution.
+
+			\newpage
+
+	\section*{Session 11.2: \\ Applications: Projectile/Area Models}
+
+		\subsection*{Projectile Motion}
+
+			When an object is thrown or launched, its height $h$ (in feet) after $t$ seconds is modeled by:
+
+			$$h = -16t^2 + v_0 t + h_0$$
+
+			where:
+			\begin{itemize}
+				\item $-16$ is half the acceleration due to gravity (in $\text{ft}/\text{s}^2$)
+				\item $v_0$ is the initial velocity (in ft/s)
+				\item $h_0$ is the initial height (in feet)
+			\end{itemize}
+
+			\textbf{Important questions:}
+			\begin{itemize}
+				\item When does the object hit the ground? (Set $h = 0$)
+				\item What is the maximum height? (Find the vertex)
+				\item When does it reach a certain height? (Set $h =$ that height)
+			\end{itemize}
+
+		\subsection*{Area Problems}
+
+			Many geometry problems involve quadratic equations:
+			\begin{itemize}
+				\item Rectangle: $\text{Area} = \text{length} \times \text{width}$
+				\item Square: $\text{Area} = \text{side}^2$
+				\item Triangle: $\text{Area} = \frac{1}{2} \times \text{base} \times \text{height}$
+			\end{itemize}
+
+		\subsection*{Checking Reasonableness}
+
+			Always check if your answer makes sense in context:
+			\begin{itemize}
+				\item Time cannot be negative (usually)
+				\item Lengths and distances must be positive
+				\item Check units match the problem
+				\item Does the magnitude make sense?
+			\end{itemize}
+
+		\newpage
+
+	\section*{Homework 11.2: \\ Applications: Projectile/Area Models}
+
+		\subsection*{Part A: Projectile Motion}
+
+			\textbf{Problem 1:}\\
+
+			A ball is thrown upward from ground level with an initial velocity of 48 feet per second.\\
+
+			Its height $h$ in feet after $t$ seconds is given by:\\
+
+			$h = -16t^2 + 48t$
+
+			\vspace{0.5cm}
+
+			\textbf{Part A:}
+            
+            When does the ball hit the ground? Show your work.
+
+			\vspace{4cm}
+
+			\textbf{Part B:}
+            
+            What is the maximum height of the ball?
+
+			\vspace{4cm}
+
+			\textbf{Part C:}
+            
+            At what time(s) is the ball at a height of 32 feet?
+
+			\newpage
+
+			\textbf{Problem 2:}\\
+
+			A rocket is launched from a platform 10 feet above the ground.\\
+
+			Its initial upward velocity is 80 feet per second.\\
+
+			Its height $h$ in feet after $t$ seconds is given by:\\
+
+			$h = -16t^2 + 80t + 10$
+
+			\vspace{0.5cm}
+
+			\textbf{Part A:}
+            
+            What is the initial height of the rocket?
+
+			\vspace{2cm}
+
+			\textbf{Part B:}
+            
+            Find the maximum height of the rocket and when it occurs.
+
+			\vspace{5cm}
+
+			\textbf{Part C:}
+            
+            When does the rocket hit the ground? (Round to 2 decimal places)
+
+			\newpage
+
+			\textbf{Problem 3:}\\
+
+			An arrow is shot upward from a height of 5 feet.\\
+
+			Its height $h$ in feet after $t$ seconds is given by:\\
+
+			$h = -16t^2 + 64t + 5$
+
+			\vspace{0.5cm}
+
+			\textbf{Part A:}
+            
+            At what time(s) is the arrow at a height of 53 feet?
+
+			\vspace{5cm}
+
+			\textbf{Part B:}
+            
+            When does the arrow return to its initial height of 5 feet?
+
+			\vspace{5cm}
+
+			\textbf{Part C:}
+            
+            Explain why one of these times is $t = 0$. What does the other time represent?
+
+			\newpage
+
+		\subsection*{Part B: Area Problems}
+
+			\textbf{Problem 4:}\\
+
+			A rectangle has a length that is 4 inches more than its width.\\
+
+			The area of the rectangle is 60 square inches.
+
+			\vspace{0.5cm}
+
+			\textbf{Part A:}
+            
+            Let $w$ represent the width in inches. Write an equation for the area.
+
+			\vspace{3cm}
+
+			\textbf{Part B:}
+            
+            Solve for $w$ using the quadratic formula.
+
+			\vspace{5cm}
+
+			\textbf{Part C:}
+            
+            Which solution is reasonable? What is the length of the rectangle?
+
+			\newpage
+
+			\textbf{Problem 5:}\\
+
+			A square picture has a frame around it.\\
+
+			The frame is 2 inches wide on all sides.\\
+
+			The total area (picture plus frame) is 120 square inches.
+
+			\vspace{0.5cm}
+
+			\textbf{Part A:}
+            
+            Let $s$ represent the side length of the picture in inches.\\
+            
+            Write an expression for the side length of the entire square (picture + frame).
+
+			\vspace{2cm}
+
+			\textbf{Part B:}
+            
+            Write an equation for the total area.
+
+			\vspace{3cm}
+
+			\textbf{Part C:}
+            
+            Solve for $s$. What is the side length of the picture?
+
+			\vspace{3cm}
+
+			\textbf{Part D:}
+            
+            Check: Does your answer make sense? Verify the total area is 120 square inches.
+
+			\newpage
+
+			\textbf{Problem 6:}\\
+
+			A rectangular garden has a length that is 3 meters more than twice its width.\\
+
+			The area of the garden is 35 square meters.
+
+			\vspace{0.5cm}
+
+			\textbf{Part A:}
+            
+            Let $w$ represent the width in meters. Write an expression for the length.
+
+			\vspace{2cm}
+
+			\textbf{Part B:}
+            
+            Write an equation for the area.
+
+			\vspace{3cm}
+
+			\textbf{Part C:}
+            
+            Solve for $w$. What are the dimensions of the garden?
+
+			\vspace{4cm}
+
+			\textbf{Part D:}
+            
+            Explain why you reject one of the solutions.
+
+			\newpage
+
+		\subsection*{Part C: Mixed Applications}
+
+			\textbf{Problem 7:}\\
+
+			A baseball is hit from a height of 3 feet.\\
+
+			Its height $h$ in feet after $t$ seconds is given by:\\
+
+			$h = -16t^2 + 40t + 3$
+
+			\vspace{0.5cm}
+
+			The outfield fence is 10 feet tall.\\
+
+			Will the ball clear the fence if it reaches the fence at $t = 2$ seconds?\\
+
+			Show your work.
+
+			\newpage
+
+			\textbf{Problem 8:}\\
+
+			A triangle has a base of $x$ centimeters and a height of $(x + 5)$ centimeters.\\
+
+			The area of the triangle is 42 square centimeters.
+
+			\vspace{0.5cm}
+
+			\textbf{Part A:}
+            
+            Write an equation for the area.
+
+			\vspace{5cm}
+
+			\textbf{Part B:}
+            
+            Solve for $x$. What are the base and height of the triangle?
+
+			\newpage
+
+	\section*{Session 11.3: \\ Mixed Methods: Choose Factor, Square Root, Formula}
+
+
+		\subsection*{Three Methods for Solving Quadratics}
+
+			\textbf{Method 1: Factoring}
+
+			Best when: The quadratic factors easily
+
+			Pros: Fast and simple when it works
+
+			Cons: Doesn't always work; can be hard to see factors
+
+			\vspace{0.5cm}
+
+			\textbf{Method 2: Square Roots}
+
+			Best when: Equation is in the form $(x - h)^2 = k$ or $ax^2 + c = 0$
+
+			Pros: Very fast for these special forms
+
+			Cons: Only works for specific types of equations
+
+			\vspace{0.5cm}
+
+			\textbf{Method 3: Quadratic Formula}
+
+			Best when: Factoring is difficult or impossible
+
+			Formula: $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
+
+			Pros: Always works for any quadratic
+
+			Cons: More steps; arithmetic can be messy
+            
+            \vspace{0.5cm}
+
+		\subsection*{Decision Guide}
+
+			If it in the form $ax^2 + c = 0$ or $(x - h)^2 = k$
+			$\rightarrow$ Use square roots
+
+			\vspace{0.5cm}
+
+			If you can easily see factors
+            $\rightarrow$ Use factoring
+
+			\vspace{0.5cm}
+
+			If factoring is hard or you're unsure
+			$\rightarrow$ Use the quadratic formula
+
+		\newpage
+
+	\section*{Homework 11.3: \\ Mixed Methods: Choose Factor, Square Root, Formula}
+
+		\subsection*{Part A: Identify the Best Method}
+
+			For each equation, identify which method would be most efficient. Do not solve.\\
+
+			\textbf{Problem 1:}
+            
+            $x^2 - 64 = 0$
+
+			\vspace{2cm}
+
+			Best method: \underline{\hspace{3in}}
+
+			\vspace{0.4cm}
+
+			Why? \underline{\hspace{4in}}
+
+			\vspace{1cm}
+
+			\textbf{Problem 2:}
+            
+            $x^2 + 7x + 12 = 0$
+
+			\vspace{2cm}
+
+			Best method: \underline{\hspace{3in}}
+
+			\vspace{0.4cm}
+
+			Why? \underline{\hspace{4in}}
+
+			\vspace{1cm}
+
+			\textbf{Problem 3:}
+            
+            $2x^2 + 5x - 3 = 0$
+
+			\vspace{2cm}
+
+			Best method: \underline{\hspace{3in}}
+
+			\vspace{0.4cm}
+
+			Why? \underline{\hspace{4in}}
+
+			\newpage
+
+			\textbf{Problem 4:}
+            
+            $(x + 4)^2 = 25$
+
+			\vspace{2cm}
+
+			Best method: \underline{\hspace{3in}}
+
+			\vspace{0.5cm}
+
+			Why? \underline{\hspace{4in}}
+
+			\vspace{1cm}
+
+			\textbf{Problem 5:}
+            
+            $3x^2 - 27 = 0$
+
+			\vspace{2cm}
+
+			Best method: \underline{\hspace{3in}}
+
+			\vspace{0.5cm}
+
+			Why? \underline{\hspace{4in}}
+
+			\vspace{1cm}
+
+			\textbf{Problem 6:}
+            
+            $x^2 + 6x + 2 = 0$
+
+			\vspace{2cm}
+
+			Best method: \underline{\hspace{3in}}
+
+			\vspace{0.5cm}
+
+			Why? \underline{\hspace{4in}}
+
+			\newpage
+
+		\subsection*{Part B: Solve Using the Best Method}
+
+			For each equation, choose the most efficient method and solve. State which method you used.\\
+
+			\textbf{Problem 7:}
+            
+            $x^2 - 9 = 0$
+
+			\vspace{3.7cm}
+
+			Method used: \underline{\hspace{2in}}
+
+			\vspace{1cm}
+
+			\textbf{Problem 8:}
+            
+            $x^2 - 8x + 15 = 0$
+
+			\vspace{3.7cm}
+
+			Method used: \underline{\hspace{2in}}
+
+			\vspace{1cm}
+
+			\textbf{Problem 9:}
+            
+            $x^2 + 4x - 1 = 0$
+
+			\vspace{3.7cm}
+
+			Method used: \underline{\hspace{2in}}
+
+			\newpage
+
+			\textbf{Problem 10:}
+            
+            $4x^2 = 100$
+
+			\vspace{4cm}
+
+			Method used: \underline{\hspace{2in}}
+
+			\vspace{1cm}
+
+			\textbf{Problem 11:}
+            
+            $2x^2 - 5x - 3 = 0$
+
+			\vspace{5cm}
+
+			Method used: \underline{\hspace{2in}}
+
+			\vspace{1cm}
+
+			\textbf{Problem 12:}
+            
+            $(x - 7)^2 = 12$
+
+			\vspace{4cm}
+
+			Method used: \underline{\hspace{2in}}
+
+			\newpage
+
+		\subsection*{Part C: More Practice—Your Choice of Method}
+
+			Solve each equation using any method you choose.\\
+
+			Show your work and state your method.\\\\
+
+			\textbf{Problem 13:}
+            
+            $x^2 - 10x + 21 = 0$
+
+			\vspace{5cm}
+
+			\textbf{Problem 14:}
+            
+            $3x^2 + 7x + 2 = 0$
+
+			\vspace{5cm}
+
+			\textbf{Problem 15:}
+            
+            $5x^2 - 80 = 0$
+
+			\newpage
+
+			\textbf{Problem 16:}
+            
+            $x^2 + 2x - 5 = 0$
+
+			\vspace{5cm}
+
+			\textbf{Problem 17:}
+            
+            $(x + 3)^2 - 16 = 0$
+
+			\vspace{5cm}
+
+			\textbf{Problem 18:}
+            
+            $x^2 - 12x + 36 = 0$
+
+			\newpage
+
+		\subsection*{Part D: Application Problems}
+
+			Solve using any method. Show your work.\\\\
+
+			\textbf{Problem 19:}\\
+
+			A ball is thrown upward from ground level.\\
+
+			Its height $h$ in feet after $t$ seconds is:\\
+
+			$h = -16t^2 + 48t$
+
+			\vspace{0.5cm}
+
+			When does the ball hit the ground?
+
+			\vspace{5cm}
+
+			Which method did you use and why?
+
+			\newpage
+
+			\textbf{Problem 20:}\\
+
+			A rectangular garden has a width of $x$ meters.\\
+
+			Its length is 7 meters more than its width.\\
+
+			The area is 120 square meters.
+
+			\vspace{0.5cm}
+
+			Find the dimensions of the garden.
+
+			\newpage
+
+	\section*{Unit 11 Quiz: \\ Quadratic Formula \& Applications}
+
+		\subsection*{Section 1: The Discriminant}
+
+			\textbf{Problem 1:}\\
+
+			Find the discriminant of $x^2 - 6x + 9 = 0$.\\
+
+			How many real solutions does the equation have?
+
+			\vspace{4cm}
+
+			\textbf{Problem 2:}\\
+
+			Find the discriminant of $2x^2 + 5x + 7 = 0$.\\
+
+			How many real solutions does the equation have?
+
+			\newpage
+
+		\subsection*{Section 2: Solve Using the Quadratic Formula}
+
+			\textbf{Problem 3:}\\
+
+			Solve $x^2 + 8x + 12 = 0$ using the quadratic formula.
+
+			\vspace{6cm}
+
+			\textbf{Problem 4:}\\
+
+			Solve $2x^2 - 6x + 1 = 0$ using the quadratic formula.\\
+
+			Simplify your answer completely.
+
+			\newpage
+
+		\subsection*{Section 3: Applications}
+
+			\textbf{Problem 5:}\\
+
+			A stone is thrown upward from a cliff 32 feet above the ground.\\
+
+			Its initial upward velocity is 64 feet per second.\\
+
+			Its height $h$ in feet after $t$ seconds is:\\
+
+			$h = -16t^2 + 64t + 32$
+
+			\vspace{0.5cm}
+
+			\textbf{Part A:}
+            
+            What is the maximum height of the stone?
+
+			\vspace{5cm}
+
+			\textbf{Part B:}
+            
+            When does the stone hit the ground? (Round to 2 decimal places)
+
+			\newpage
+
+			\textbf{Problem 6:}\\
+
+			A rectangle has a width of $w$ inches.\\
+
+			Its length is 5 inches more than twice its width.\\
+
+			The area of the rectangle is 75 square inches.
+
+			\vspace{0.5cm}
+
+			\textbf{Part A:}
+            
+            Write an equation for the area.
+
+			\vspace{3cm}
+
+			\textbf{Part B:}
+            
+            Solve for $w$ and find the dimensions of the rectangle.
+
+			\newpage
+
+		\subsection*{Section 4: Choose Your Method}
+
+			Solve each equation using the most efficient method.  State which method you used.\\
+
+			\textbf{Problem 7:}
+            
+            $x^2 - 16 = 0$
+
+			\vspace{3.9cm}
+
+			Method: \underline{\hspace{2in}}
+
+			\vspace{1cm}
+
+			\textbf{Problem 8:}
+            
+            $x^2 + 9x + 20 = 0$
+
+			\vspace{3.9cm}
+
+			Method: \underline{\hspace{2in}}
+
+			\vspace{1cm}
+
+			\textbf{Problem 9:}
+            
+            $x^2 + 6x + 4 = 0$
+
+			\vspace{3.9cm}
+
+			Method: \underline{\hspace{2in}}
+
+			\newpage
+
+\end{document}
